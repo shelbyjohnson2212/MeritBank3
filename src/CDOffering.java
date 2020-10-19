@@ -1,7 +1,7 @@
 
 public class CDOffering {
 	double interestRate;
-	int terms;
+	static int terms;
 	
 	public CDOffering(int terms, double interestRate){
 		this.terms = terms;
@@ -20,18 +20,15 @@ public class CDOffering {
 		String[] holding =cdOfferingDataString.split(",");
 		int term = Integer.parseInt(holding[0]);
 		double interestRate = Double.parseDouble(holding[1]);
-		return new CDOffering(terms, interestRate);
-	
+		return new CDOffering(terms, interestRate);	
 	}
 
 	public String writeToString() {
-	StringBuilder cdOfferingData = new StringBuilder();
-	cdOfferingData.append(terms).append(",");
-	cdOfferingData.append(interestRate);
-	return cdOfferingData.toString();
+		StringBuilder cdOfferingData = new StringBuilder();
+		cdOfferingData.append(terms).append(",");
+		cdOfferingData.append(interestRate);
+		return cdOfferingData.toString();
 	}
-	
-
 }
 
 
